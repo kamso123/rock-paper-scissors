@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const string = "The revolution will not be televised.";
+        console.log(string);
+
+    //this will have the same value as string above
+        const badString = string;
+        console.log(badString);
+
+        const single = 'Single quotes';
+        const double = "Double quotes";
+        const backtick = `Backtick`;
+
+        console.log(single);
+        console.log(double);
+        console.log(backtick);
+
+        //`${}` is used to join two variables
+        const name = "Chris"
+        const greeting = `Hello, ${name}`;
+        console.log(greeting);
+
+        const tell = "8:45am"
+        const statement = `The time is ${tell}`;
+        console.log(statement);
+
+        const song = "'Fight the Youth'";
+        const score = 9;
+        const highestScore = 10;
+        const output = `I like the song ${song}, I gave it a score of ${(score/highestScore) * 100}%`;
+        console.log(output);
+
+//MULTILINE STRINGS
+        const newline = `One day you finally knew
+        what you had to do, and began,`;
+        console.log(newline)
+
+        const nam = "Front ";
+        const numb = 242;
+        console.log(nam + numb); // "Front 242"
+
+         const myString = "123";
+         const myNum = Number(myString);
+         console.log(typeof myNum);
+        // number
+
+        let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let length = text.length;
+        console.log(length);
+
+        //The charAt() method returns the character at a given position in a string:
+        let text1 = "HELLO WORLD";
+        let char1 = text1.charAt(6);
+        console.log(char1);
+
+        //The charCodeAt() method returns the code of the character at a specified index in a string.
+        let text2 = "HELLO WORLD";
+        let char2 = text2.charCodeAt(0);
+        console.log(char2);
+
+        //The codePointAt() returns the code point at a specified position in a string.
+        let text3 = "HELLO WORLD";
+        let code = text3.codePointAt(3);
+        console.log(code);  
+
+        //The at() method returns an indexed element from a string:
+        const name2 = "W3Schools";
+        let letter = name2.at(4);
+        console.log(letter);
+
+        //Property Access
+        let text4 = "HELLO WORLD";
+        let char = text4[12];
+        console.log(char)
+
+        //CONCAT; JOINING 2 or more strings
+        let text5 = "Hello";
+        let text6 = "World";
+        let text8 = ",I mean Kam!"
+        let text7 = text5.concat(" ", text6, " ", text8);
+        console.log(text7)
+
+        //String Slice
+        let text9 = "Apple, Banana, Kiwi";
+        let part = text9.slice(0, 13);
+        console.log(part)
+
+        let tex = "Apple, Banana, Kiwi";
+        let part2 = tex.slice(-12,-6);
+        console.log(part2)
+
+        //String substring
+        let str = "Apple, Banana, Kiwi";
+        let part3 = str.substring(7, 13);
+        console.log(part3)
+
+        //String substr()
+        let str2 = "Apple, Banana, Kiwi";
+        let part11 = str2.substr(7);
+        console.log(part11)
+
+        //Convert string to upper case:
+        const string3 = "The revolution will not be televised.";
+        const string4 =string3.toUpperCase();
+        console.log(string4);
+        
+        //A string is not well formed if it contains lone surrogates.
+        let text13 = "Hello world!";
+        let result = text13.isWellFormed();
+        console.log(result);
+
+        let text14 = "Hello World \uD800";
+        let result2 = text14.isWellFormed();
+        console.log(result2)
+
+        //toWellFormed() returns a new string where all "lone surrogates" 
+        // are replaced with the Unicode replacement character (U+FFFD).
+        let text15 = "Hello World \uD800";
+        let result3 = text.toWellFormed();
+        console.log(result3);
+
+        //String padStart() pads a string with another string (multiple times) until it reaches a given length.
+        let text123 = "5";
+        let padded = text123.padStart(6,"x");
+        console.log(padded);
+
+        let text16 = "5";
+        let padded2 = text16.padEnd(4,"x");
+        console.log(padded2);
+
+        //repeat() method returns a string with a number of copies of a string.
+        let text17 = "HELLO WORLD! ";
+        let result5 = text17.repeat(5)
+        console.log(result5);
+
+        //replace() method replaces a specified value with another value in a string
+        let text18 = "Please visit Microsoft!";
+        let newText = text18.replace("Microsoft", "W3Schools");
+        console.log(newText);
+
+    function favoriteAnimal(animal) {
+    return animal + " is my favorite animal!"
+}
+console.log(favoriteAnimal('Koala'))
+    
+    function add7(digit) {
+        return digit + 7
+    }
+    console.log(add7(8))
+
+    function multiply(digit2, digit3){
+        return digit2 * digit3
+    } console.log(multiply(8,5))
+
+  function capitalize(str) {
+  return str[0].toUpperCase() + str.slice(1).toLowerCase();
+}console.log(capitalize('work'))
+   
+ function lastLetter(word){
+    return word[word.length - 1] //display only last letter
+ } console.log(lastLetter('brief'))
+
+    </script>
+</body>
+</html>
