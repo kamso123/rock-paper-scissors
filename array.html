@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array/Loops</title>
+</head>
+<body>
+    <script>
+        function sumOfTripledEvens(array){
+            for (let i=0;i<array.length;i++){
+                if(array[i] % 2 === 0){
+                    const tripleEvenNumber = array[i] * 3;
+
+                    sum += tripleEvenNumber;
+                }
+            }
+            return sum;
+        }
+       
+
+        function addOne(num){
+            return num + 1;
+        }
+            const arr=[1,2,3,4,5];
+            const mappedArr = arr.map(addOne);
+            console.log(mappedArr);
+
+            // const arr = [1, 2, 3, 4, 5];
+            // const mappedArr = arr.map((num) => num + 1);
+            // console.log(mappedArr); // Outputs [2, 3, 4, 5, 6]
+
+            function isOdd(num){
+                return num % 2 !==0;
+            }
+            const arr2 = [1,2,3,4,5];
+            const oddNums = arr2.filter(isOdd);
+            console.log(arr2);
+            console.log(oddNums);
+
+
+            const arr3 = [1, 2, 3, 4, 5];
+            const productOfAllNums = arr3.reduce((total, currentItem) => {
+            return total * currentItem;
+           }, 1);
+            console.log(productOfAllNums); // Outputs 120;
+            console.log(arr3); // Outputs [1, 2, 3, 4, 5]
+
+            function camelize(str){
+            return str
+            .split('-')
+             .map(
+                (word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+             )
+            .join('');
+            }
+
+
+            function filterRange(arr4,a,b){
+                return arr4.filter(item =>(a <= item && item<= b));
+            }
+            let arr4 = [5, 3, 8, 1];
+            let filtered = filterRange(arr4, 1, 4);
+            alert( filtered ); // 3,1 (matching values)
+            alert( arr4 ); // 5,3,8,1 (not modified)
+
+            function filterRangeInPlace(arr5, a, b){
+                for(let i=0; i<arr5.length; i++){
+                    let val = arr[i];
+                    if (val < a || val >b){
+                        arr4.splice(i,1);
+                    }
+                } 
+
+            }
+
+
+
+            
+
+
+        
+    </script>
+</body>
+</html>
